@@ -1,5 +1,3 @@
-#!/usr/bin/env bash
-
 bash ./stop-all.sh
 set -euo pipefail
 
@@ -11,13 +9,11 @@ pushd "$KAFKA_DIR" >/dev/null
 
 CONFIG="config/kraft/server.properties"
 
-# форматируем ТОЛЬКО если НЕТ meta.properties
 if [ ! -f "kafka-data/meta.properties" ]; then
   CID=$(bin/kafka-storage.sh random-uuid)
   bin/kafka-storage.sh format -t "$CID" -c "$CONFIG"
 fi
 
-# запускаем всегда из каталога kafka (чтобы относительные пути в конфиге работали)
 bin/kafka-server-start.sh "$CONFIG" > ../kafka.log 2>&1 &
 echo $! > ../kafka.pid
 
@@ -35,7 +31,6 @@ chmod +x gw || true
 
 echo "Using KAFKA_BOOTSTRAP=$KAFKA_BOOTSTRAP DATA_DIR=$DATA_DIR"
 
-# стартуем по одному, чтобы не забить память
 ( cd gateway     && ../gw $FLAGS :gateway:run     -DKAFKA_BOOTSTRAP="$KAFKA_BOOTSTRAP" -DDATA_DIR="$DATA_DIR" ) &
 sleep 2
 ( cd chat        && ../gw $FLAGS :chat:run        -DKAFKA_BOOTSTRAP="$KAFKA_BOOTSTRAP" -DDATA_DIR="$DATA_DIR" ) &
