@@ -1,0 +1,19 @@
+subprojects {
+    apply plugin: 'java'
+    apply plugin: 'application'
+
+    repositories { mavenCentral() }
+
+    dependencies {
+        implementation 'org.apache.kafka:kafka-clients:3.7.0'
+        implementation 'org.xerial:sqlite-jdbc:3.46.0.0'
+    }
+
+    java {
+        toolchain {
+            languageVersion = JavaLanguageVersion.of(21)
+        }
+    }
+
+    tasks.withType(Test).configureEach { useJUnitPlatform() }
+}
