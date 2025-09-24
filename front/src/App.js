@@ -48,10 +48,10 @@ export default function App() {
             setInventory((x) => [...x, payload].slice(-200));
             break;
           case "match.created":
-            setMatches((x) => [...x, { ...payload, status: "created" }].slice(-200));
+            setMatches((x) => [...x, { ...payload, status: "Created" }].slice(-200));
             break;
           case "match.finished":
-            setMatches((x) => [...x, { ...payload, status: "finished" }].slice(-200));
+            setMatches((x) => [...x].slice(-200));
             break;
           default:
             // ignore heartbeat/unknown
@@ -71,7 +71,7 @@ export default function App() {
       setStats(j.stats ?? []);
       setAlerts(j.anticheat ?? []);
       setMatches(j.matchmaking ?? []);
-      setInventory(j.store ?? (j.inventory || []));
+      setInventory(getInventory(j.store, j.inventory));
       setSnack({ type: "success", msg: "Snapshot updated" });
     } catch (e) {
       setSnack({ type: "error", msg: "Snapshot failed" });
@@ -169,31 +169,21 @@ function ChatTab({ chat, setSnack }) {
 
 /* -------------------- Stats -------------------- */
 function StatsTab({ stats }) {
-  // агрегируем по игроку (демо)
-  const byPlayer = useMemo(() => {
-    const map = new Map();
-    stats.forEach(s => {
-      const k = s.playerId || s.player_id;
-      if (!k) return;
-      if (!map.has(k)) map.set(k, { playerId: k, mmrDelta: 0, updates: 0 });
-      const obj = map.get(k);
-      obj.mmrDelta += Number(s.mmrDelta ?? 0);
-      obj.updates += 1;
-    });
-    return [...map.values()].sort((a,b)=>b.mmrDelta-a.mmrDelta);
-  }, [stats]);
 
+  const newStats = [...stats].sort((a,b) => a.mmr > b.mmr ? -1 : 1)
+
+  console.log('m', newStats)
   return (
     <Box sx={{ p: 3 }}>
-      <Typography variant="h6" gutterBottom>📊 Last updates</Typography>
+      <Typography variant="h6" gutterBottom>📊 Leaderboards</Typography>
       <Stack spacing={1}>
-        {byPlayer.map((p, i) => (
+        {newStats.map((p, i) => (
           <Paper key={i} sx={{ p: 1.2, display: "flex", justifyContent: "space-between" }}>
-            <Typography><b>{p.playerId}</b></Typography>
-            <Typography variant="body2">ΔMMR: {p.mmrDelta} • events: {p.updates}</Typography>
+            <Typography><b>{p.playerId.replace('+', '')}</b></Typography>
+            <Typography variant="body2">MMR: {p.mmr} • wins: {p.wins}</Typography>
           </Paper>
         ))}
-        {byPlayer.length === 0 && <Typography variant="body2" color="text.secondary">No stats yet.</Typography>}
+        {newStats.length === 0 && <Typography variant="body2" color="text.secondary">No stats yet.</Typography>}
       </Stack>
     </Box>
   );
@@ -233,8 +223,8 @@ function AntiCheatTab({ alerts, setSnack }) {
         {alerts.slice().reverse().map((a, i) => (
           <Paper key={i} sx={{ p: 1.2, display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 1 }}>
             <Typography variant="body2"><b>{a.playerId}</b></Typography>
-            <Typography variant="body2">speed={a.speed}</Typography>
-            <Typography variant="body2" color="text.secondary">{a.reason}</Typography>
+            <Typography variant="body2">speed</Typography>
+            <Typography variant="body2" color="text.secondary">{a.score || a.speed}</Typography>
           </Paper>
         ))}
         {alerts.length === 0 && <Typography variant="body2" color="text.secondary">No alerts.</Typography>}
@@ -259,6 +249,8 @@ function MatchmakingTab({ matches, setSnack }) {
     const q = new URLSearchParams(finish).toString();
     await call(`${MM}/finish?${q}`, setSnack, "Finished", "Finish failed");
   };
+
+  console.log('matches',matches)
 
   return (
     <Box sx={{ p: 3 }}>
@@ -285,8 +277,17 @@ function MatchmakingTab({ matches, setSnack }) {
       <Stack spacing={1}>
         {matches.slice().reverse().map((m, i) => (
           <Paper key={i} sx={{ p: 1.2, display: "flex", justifyContent: "space-between" }}>
-            <Typography variant="body2"><b>{m.matchId || m.id || "?"}</b></Typography>
-            <Chip size="small" label={m.status} />
+            <Box sx={{display: 'grid', gridTemplateColumns: '2fr 1fr 1fr', width: '100%'}}>
+              <Typography variant="body1"><b>Match ID</b></Typography>
+              <Typography variant="body1"><b>Players</b></Typography>
+              <Typography variant="body1"><b>Created At</b></Typography>
+              <Typography variant="body2" sx={{cursor: 'pointer'}} onClick={() => setFinish((prev) => ({...prev, matchId: m.matchId}))}><b>{m.matchId || m.id || "?"}</b></Typography>
+              <Typography variant="body2">{preparePlayerList(m.players).map((pl) => (
+                <span style={{marginLeft: '5px', cursor: 'pointer'}} onClick={() => setFinish((prev) => ({...prev, playerId: pl}))}>{pl}</span>
+              ))}</Typography>
+              <Typography variant="body2"><b>{m.matchId || m.id || "?"}</b></Typography>
+            </Box>
+            <Chip size="small" label={m.status || 'Running'} />
           </Paper>
         ))}
         {matches.length === 0 && <Typography variant="body2" color="text.secondary">No matches yet.</Typography>}
@@ -330,9 +331,9 @@ function InventoryTab({ inventory }) {
       <Stack spacing={1}>
         {inventory.slice().reverse().map((g, i) => (
           <Paper key={i} sx={{ p: 1.2, display: "grid", gridTemplateColumns: "1fr 2fr 1fr", gap: 1 }}>
-            <Typography variant="body2"><b>{g.playerId}</b></Typography>
+            <Typography variant="body2"><b>{g.playerId} {g.amount? 'bought for' : 'ordered'} {g.amount} {g.currency}</b></Typography>
             <Typography variant="body2">{g.item || g.itemName}</Typography>
-            <Typography variant="body2" color="text.secondary">{g.created_at || ""}</Typography>
+            <Typography variant="body2" color="text.secondary">{g.created_at || "Processing"}</Typography>
           </Paper>
         ))}
         {inventory.length === 0 && <Typography variant="body2" color="text.secondary">No items yet.</Typography>}
@@ -350,4 +351,21 @@ async function call(url, setSnack, okMsg, errMsg) {
   } catch {
     setSnack({ type: "error", msg: errMsg });
   }
+}
+
+
+const preparePlayerList = (pl) => {
+  if(Array.isArray(pl)){
+    return pl.map(({id}) => id)
+  }
+
+  return pl.replace('[', '').replace(']', '').split(',')
+}
+
+const getInventory = (store, inv) => {
+  return inv.map((invItem) => {
+    const storeItem = store.find(s => s.order_id === invItem.order_id) ?? {};
+
+    return {...invItem, ...storeItem}
+  })
 }

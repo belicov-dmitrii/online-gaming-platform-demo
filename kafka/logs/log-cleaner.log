@@ -27,3 +27,4 @@
 [2025-09-24 22:12:03,964] INFO Starting the log cleaner (kafka.log.LogCleaner)
 [2025-09-24 22:13:35,388] INFO Shutting down the log cleaner. (kafka.log.LogCleaner)
 [2025-09-24 22:16:05,125] INFO Starting the log cleaner (kafka.log.LogCleaner)
+[2025-09-24 22:44:47,986] INFO Starting the log cleaner (kafka.log.LogCleaner)
