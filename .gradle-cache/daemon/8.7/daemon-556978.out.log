@@ -1,0 +1,130 @@
+2025-09-24T22:15:56.943+0300 [DEBUG] [org.gradle.launcher.daemon.bootstrap.DaemonMain] Assuming the daemon was started with following jvm opts: [--add-opens=java.base/java.util=ALL-UNNAMED, --add-opens=java.base/java.lang=ALL-UNNAMED, --add-opens=java.base/java.lang.invoke=ALL-UNNAMED, --add-opens=java.prefs/java.util.prefs=ALL-UNNAMED, --add-opens=java.base/java.nio.charset=ALL-UNNAMED, --add-opens=java.base/java.net=ALL-UNNAMED, --add-opens=java.base/java.util.concurrent.atomic=ALL-UNNAMED, -Xms64m, -Xmx256m, -Dfile.encoding=UTF-8, -Duser.country, -Duser.language=en, -Duser.variant]
+2025-09-24T22:15:57.007+0300 [INFO] [org.gradle.launcher.daemon.server.Daemon] start() called on daemon - DefaultDaemonContext[uid=59ba52bf-6391-464b-a05f-5ac05aed2f83,javaHome=/usr/lib/jvm/java-21-openjdk-amd64,daemonRegistryDir=/home/asp/projects/java-kafka-platform/.gradle-cache/daemon,pid=556978,idleTimeout=120000,priority=NORMAL,applyInstrumentationAgent=true,daemonOpts=--add-opens=java.base/java.util=ALL-UNNAMED,--add-opens=java.base/java.lang=ALL-UNNAMED,--add-opens=java.base/java.lang.invoke=ALL-UNNAMED,--add-opens=java.prefs/java.util.prefs=ALL-UNNAMED,--add-opens=java.base/java.nio.charset=ALL-UNNAMED,--add-opens=java.base/java.net=ALL-UNNAMED,--add-opens=java.base/java.util.concurrent.atomic=ALL-UNNAMED,-Xms64m,-Xmx256m,-Dfile.encoding=UTF-8,-Duser.country,-Duser.language=en,-Duser.variant]
+2025-09-24T22:15:57.021+0300 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding IP addresses for network interface docker0
+2025-09-24T22:15:57.021+0300 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Is this a loopback interface? false
+2025-09-24T22:15:57.021+0300 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding remote address /172.17.0.1
+2025-09-24T22:15:57.021+0300 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding IP addresses for network interface br-0d1fd540a162
+2025-09-24T22:15:57.022+0300 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Is this a loopback interface? false
+2025-09-24T22:15:57.022+0300 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding remote address /172.18.0.1
+2025-09-24T22:15:57.022+0300 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding IP addresses for network interface eth0
+2025-09-24T22:15:57.022+0300 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Is this a loopback interface? false
+2025-09-24T22:15:57.022+0300 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding remote address /fe80:0:0:0:215:5dff:fec9:a217%eth0
+2025-09-24T22:15:57.022+0300 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding remote address /172.28.106.182
+2025-09-24T22:15:57.022+0300 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding IP addresses for network interface lo
+2025-09-24T22:15:57.023+0300 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Is this a loopback interface? true
+2025-09-24T22:15:57.023+0300 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding loopback address /0:0:0:0:0:0:0:1%lo
+2025-09-24T22:15:57.023+0300 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Ignoring remote address on loopback interface /10.255.255.254
+2025-09-24T22:15:57.023+0300 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding loopback address /127.0.0.1
+2025-09-24T22:15:57.024+0300 [DEBUG] [org.gradle.internal.remote.internal.inet.TcpIncomingConnector] Listening on [b81e72ee-63f3-4233-9700-36fcc3ff4fea port:44847, addresses:[localhost/127.0.0.1]].
+2025-09-24T22:15:57.031+0300 [DEBUG] [org.gradle.launcher.daemon.server.Daemon] Daemon starting at: Wed Sep 24 22:15:57 EEST 2025, with address: [b81e72ee-63f3-4233-9700-36fcc3ff4fea port:44847, addresses:[localhost/127.0.0.1]]
+2025-09-24T22:15:57.032+0300 [INFO] [org.gradle.launcher.daemon.server.DaemonRegistryUpdater] Advertising the daemon address to the clients: [b81e72ee-63f3-4233-9700-36fcc3ff4fea port:44847, addresses:[localhost/127.0.0.1]]
+2025-09-24T22:15:57.032+0300 [DEBUG] [org.gradle.launcher.daemon.server.DaemonRegistryUpdater] Advertised daemon context: DefaultDaemonContext[uid=59ba52bf-6391-464b-a05f-5ac05aed2f83,javaHome=/usr/lib/jvm/java-21-openjdk-amd64,daemonRegistryDir=/home/asp/projects/java-kafka-platform/.gradle-cache/daemon,pid=556978,idleTimeout=120000,priority=NORMAL,applyInstrumentationAgent=true,daemonOpts=--add-opens=java.base/java.util=ALL-UNNAMED,--add-opens=java.base/java.lang=ALL-UNNAMED,--add-opens=java.base/java.lang.invoke=ALL-UNNAMED,--add-opens=java.prefs/java.util.prefs=ALL-UNNAMED,--add-opens=java.base/java.nio.charset=ALL-UNNAMED,--add-opens=java.base/java.net=ALL-UNNAMED,--add-opens=java.base/java.util.concurrent.atomic=ALL-UNNAMED,-Xms64m,-Xmx256m,-Dfile.encoding=UTF-8,-Duser.country,-Duser.language=en,-Duser.variant]
+2025-09-24T22:15:57.032+0300 [DEBUG] [org.gradle.launcher.daemon.registry.PersistentDaemonRegistry] Storing daemon address: [b81e72ee-63f3-4233-9700-36fcc3ff4fea port:44847, addresses:[localhost/127.0.0.1]], context: DefaultDaemonContext[uid=59ba52bf-6391-464b-a05f-5ac05aed2f83,javaHome=/usr/lib/jvm/java-21-openjdk-amd64,daemonRegistryDir=/home/asp/projects/java-kafka-platform/.gradle-cache/daemon,pid=556978,idleTimeout=120000,priority=NORMAL,applyInstrumentationAgent=true,daemonOpts=--add-opens=java.base/java.util=ALL-UNNAMED,--add-opens=java.base/java.lang=ALL-UNNAMED,--add-opens=java.base/java.lang.invoke=ALL-UNNAMED,--add-opens=java.prefs/java.util.prefs=ALL-UNNAMED,--add-opens=java.base/java.nio.charset=ALL-UNNAMED,--add-opens=java.base/java.net=ALL-UNNAMED,--add-opens=java.base/java.util.concurrent.atomic=ALL-UNNAMED,-Xms64m,-Xmx256m,-Dfile.encoding=UTF-8,-Duser.country,-Duser.language=en,-Duser.variant]
+2025-09-24T22:15:57.036+0300 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire exclusive lock on daemon addresses registry.
+2025-09-24T22:15:57.038+0300 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2025-09-24T22:15:57.038+0300 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2025-09-24T22:15:57.039+0300 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire exclusive lock on daemon addresses registry.
+2025-09-24T22:15:57.040+0300 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2025-09-24T22:15:57.041+0300 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2025-09-24T22:15:57.041+0300 [LIFECYCLE] [org.gradle.launcher.daemon.server.Daemon] Daemon server started.
+2025-09-24T22:15:57.042+0300 [DEBUG] [org.gradle.launcher.daemon.bootstrap.DaemonStartupCommunication] Completed writing the daemon greeting. Closing streams...
+2025-09-24T22:15:57.044+0300 [DEBUG] [org.gradle.launcher.daemon.server.Daemon] stopOnExpiration() called on daemon
+2025-09-24T22:15:57.045+0300 [DEBUG] [org.gradle.launcher.daemon.server.Daemon] awaitExpiration() called on daemon
+2025-09-24T22:15:57.046+0300 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] daemon is running. Sleeping until state changes.
+2025-09-24T22:15:57.053+0300 [DEBUG] [org.gradle.internal.remote.internal.inet.TcpIncomingConnector] Accepted connection from /127.0.0.1:45302 to /127.0.0.1:44847.
+2025-09-24T22:15:57.069+0300 [DEBUG] [org.gradle.launcher.daemon.server.SynchronizedDispatchConnection] thread 36: received class org.gradle.launcher.daemon.protocol.Build
+2025-09-24T22:15:57.069+0300 [DEBUG] [org.gradle.launcher.daemon.server.DefaultDaemonConnection] thread 36: Received non-IO message from client: Build{id=000815ba-4d84-4d39-84af-e1bfba7cd0da, currentDir=/home/asp/projects/java-kafka-platform}
+2025-09-24T22:15:57.069+0300 [INFO] [org.gradle.launcher.daemon.server.DefaultIncomingConnectionHandler] Received command: Build{id=000815ba-4d84-4d39-84af-e1bfba7cd0da, currentDir=/home/asp/projects/java-kafka-platform}.
+2025-09-24T22:15:57.069+0300 [DEBUG] [org.gradle.launcher.daemon.server.DefaultIncomingConnectionHandler] Starting executing command: Build{id=000815ba-4d84-4d39-84af-e1bfba7cd0da, currentDir=/home/asp/projects/java-kafka-platform} with connection: socket connection from /127.0.0.1:44847 to /127.0.0.1:45302.
+2025-09-24T22:15:57.071+0300 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] Command execution: started DaemonCommandExecution[command = Build{id=000815ba-4d84-4d39-84af-e1bfba7cd0da, currentDir=/home/asp/projects/java-kafka-platform}, connection = DefaultDaemonConnection: socket connection from /127.0.0.1:44847 to /127.0.0.1:45302] after 0.0 minutes of idle
+2025-09-24T22:15:57.071+0300 [INFO] [org.gradle.launcher.daemon.server.DaemonRegistryUpdater] Marking the daemon as busy, address: [b81e72ee-63f3-4233-9700-36fcc3ff4fea port:44847, addresses:[localhost/127.0.0.1]]
+2025-09-24T22:15:57.071+0300 [DEBUG] [org.gradle.launcher.daemon.registry.PersistentDaemonRegistry] Marking busy by address: [b81e72ee-63f3-4233-9700-36fcc3ff4fea port:44847, addresses:[localhost/127.0.0.1]]
+2025-09-24T22:15:57.071+0300 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire exclusive lock on daemon addresses registry.
+2025-09-24T22:15:57.071+0300 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2025-09-24T22:15:57.072+0300 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2025-09-24T22:15:57.072+0300 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] resetting idle timer
+2025-09-24T22:15:57.072+0300 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] daemon is running. Sleeping until state changes.
+2025-09-24T22:15:57.072+0300 [INFO] [org.gradle.launcher.daemon.server.exec.StartBuildOrRespondWithBusy] Daemon is about to start building Build{id=000815ba-4d84-4d39-84af-e1bfba7cd0da, currentDir=/home/asp/projects/java-kafka-platform}. Dispatching build started information...
+2025-09-24T22:15:57.072+0300 [DEBUG] [org.gradle.launcher.daemon.server.SynchronizedDispatchConnection] thread 48: dispatching org.gradle.launcher.daemon.protocol.BuildStarted@58b044d3
+2025-09-24T22:15:57.074+0300 [DEBUG] [org.gradle.launcher.daemon.server.exec.EstablishBuildEnvironment] Configuring env variables: [PATH, LESSCLOSE, XDG_DATA_DIRS, WSL2_GUI_APPS_ENABLED, TERM, LANG, DBUS_SESSION_BUS_ADDRESS, VSCODE_GIT_IPC_HANDLE, VSCODE_PYTHON_AUTOACTIVATE_GUARD, VSCODE_GIT_ASKPASS_MAIN, DISPLAY, NVM_INC, GRADLE_USER_HOME, COLORTERM, WAYLAND_DISPLAY, VSCODE_IPC_HOOK_CLI, VSCODE_GIT_ASKPASS_EXTRA_ARGS, LOGNAME, VSCODE_GIT_ASKPASS_NODE, TERM_PROGRAM_VERSION, PWD, GIT_ASKPASS, NVM_CD_FLAGS, SHELL, LESSOPEN, NVM_DIR, WSL_INTEROP, WSL_DISTRO_NAME, TERM_PROGRAM, HOSTTYPE, USER, PULSE_SERVER, NAME, WSLENV, LS_COLORS, XDG_RUNTIME_DIR, NVM_BIN, SHLVL, HOME]
+2025-09-24T22:15:57.076+0300 [DEBUG] [org.gradle.launcher.daemon.server.exec.LogToClient] About to start relaying all logs to the client via the connection.
+2025-09-24T22:15:57.076+0300 [INFO] [org.gradle.launcher.daemon.server.exec.LogToClient] The client will now receive all logging from the daemon (pid: 556978). The daemon log file: /home/asp/projects/java-kafka-platform/.gradle-cache/daemon/8.7/daemon-556978.out.log
+2025-09-24T22:15:57.077+0300 [DEBUG] [org.gradle.launcher.daemon.server.exec.RequestStopIfSingleUsedDaemon] Requesting daemon stop after processing Build{id=000815ba-4d84-4d39-84af-e1bfba7cd0da, currentDir=/home/asp/projects/java-kafka-platform}
+2025-09-24T22:15:57.077+0300 [LIFECYCLE] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] Daemon will be stopped at the end of the build 
+2025-09-24T22:15:57.077+0300 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] Stop as soon as idle requested. The daemon is busy: true
+2025-09-24T22:15:57.077+0300 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] daemon stop has been requested. Sleeping until state changes.
+2025-09-24T22:15:57.077+0300 [DEBUG] [org.gradle.launcher.daemon.server.exec.ExecuteBuild] The daemon has started executing the build.
+2025-09-24T22:15:57.077+0300 [DEBUG] [org.gradle.launcher.daemon.server.exec.ExecuteBuild] Executing build with daemon context: DefaultDaemonContext[uid=59ba52bf-6391-464b-a05f-5ac05aed2f83,javaHome=/usr/lib/jvm/java-21-openjdk-amd64,daemonRegistryDir=/home/asp/projects/java-kafka-platform/.gradle-cache/daemon,pid=556978,idleTimeout=120000,priority=NORMAL,applyInstrumentationAgent=true,daemonOpts=--add-opens=java.base/java.util=ALL-UNNAMED,--add-opens=java.base/java.lang=ALL-UNNAMED,--add-opens=java.base/java.lang.invoke=ALL-UNNAMED,--add-opens=java.prefs/java.util.prefs=ALL-UNNAMED,--add-opens=java.base/java.nio.charset=ALL-UNNAMED,--add-opens=java.base/java.net=ALL-UNNAMED,--add-opens=java.base/java.util.concurrent.atomic=ALL-UNNAMED,-Xms64m,-Xmx256m,-Dfile.encoding=UTF-8,-Duser.country,-Duser.language=en,-Duser.variant]
+Path for java installation '/usr/lib/jvm/openjdk-21' (Common Linux Locations) does not contain a java executable
+
+BUILD SUCCESSFUL in 5s
+30 actionable tasks: 30 up-to-date
+2025-09-24T22:16:01.666+0300 [DEBUG] [org.gradle.launcher.daemon.server.exec.ExecuteBuild] The daemon has finished executing the build.
+2025-09-24T22:16:01.669+0300 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] daemon stop has been requested. Sleeping until state changes.
+2025-09-24T22:16:01.669+0300 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] Command execution: finished waiting for DaemonCommandExecution[command = Build{id=000815ba-4d84-4d39-84af-e1bfba7cd0da, currentDir=/home/asp/projects/java-kafka-platform}, connection = DefaultDaemonConnection: socket connection from /127.0.0.1:44847 to /127.0.0.1:45302]. Result org.gradle.launcher.daemon.server.DaemonStateCoordinator@54a13502 with state StopRequested
+2025-09-24T22:16:01.669+0300 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] Command execution: completed DaemonCommandExecution[command = Build{id=000815ba-4d84-4d39-84af-e1bfba7cd0da, currentDir=/home/asp/projects/java-kafka-platform}, connection = DefaultDaemonConnection: socket connection from /127.0.0.1:44847 to /127.0.0.1:45302]
+2025-09-24T22:16:01.670+0300 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] resetting idle timer
+2025-09-24T22:16:01.670+0300 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] Marking daemon stopped due to command completed and stop requested. The daemon is running a build: false
+2025-09-24T22:16:01.670+0300 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] daemon has stopped.
+2025-09-24T22:16:01.670+0300 [DEBUG] [org.gradle.launcher.daemon.server.exec.ReturnResult] Daemon is dispatching the build result: Success[value=org.gradle.launcher.exec.BuildActionResult@11ce2818]
+2025-09-24T22:16:01.670+0300 [DEBUG] [org.gradle.launcher.daemon.server.Daemon] stop() called on daemon
+2025-09-24T22:16:01.670+0300 [DEBUG] [org.gradle.launcher.daemon.server.SynchronizedDispatchConnection] thread 35: dispatching Success[value=org.gradle.launcher.exec.BuildActionResult@11ce2818]
+2025-09-24T22:16:01.670+0300 [INFO] [org.gradle.launcher.daemon.server.Daemon] Stop requested. Daemon is removing its presence from the registry...
+2025-09-24T22:16:01.670+0300 [DEBUG] [org.gradle.launcher.daemon.server.DaemonRegistryUpdater] Removing our presence to clients, eg. removing this address from the registry: [b81e72ee-63f3-4233-9700-36fcc3ff4fea port:44847, addresses:[localhost/127.0.0.1]]
+2025-09-24T22:16:01.671+0300 [DEBUG] [org.gradle.launcher.daemon.registry.PersistentDaemonRegistry] Removing daemon address: [b81e72ee-63f3-4233-9700-36fcc3ff4fea port:44847, addresses:[localhost/127.0.0.1]]
+2025-09-24T22:16:01.671+0300 [DEBUG] [org.gradle.launcher.daemon.server.exec.CleanUpVirtualFileSystemAfterBuild] Cleaning virtual file system after build finished
+2025-09-24T22:16:01.671+0300 [DEBUG] [org.gradle.launcher.daemon.server.DefaultIncomingConnectionHandler] Finishing executing command: Build{id=000815ba-4d84-4d39-84af-e1bfba7cd0da, currentDir=/home/asp/projects/java-kafka-platform}
+2025-09-24T22:16:01.671+0300 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire exclusive lock on daemon addresses registry.
+2025-09-24T22:16:01.671+0300 [DEBUG] [org.gradle.launcher.daemon.server.SynchronizedDispatchConnection] thread 36: received class org.gradle.launcher.daemon.protocol.CloseInput
+2025-09-24T22:16:01.671+0300 [DEBUG] [org.gradle.launcher.daemon.server.DefaultDaemonConnection] thread 36: Received IO message from client: org.gradle.launcher.daemon.protocol.CloseInput@7d1f3ec
+2025-09-24T22:16:01.671+0300 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2025-09-24T22:16:01.671+0300 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2025-09-24T22:16:01.671+0300 [DEBUG] [org.gradle.launcher.daemon.server.DaemonRegistryUpdater] Address removed from registry.
+2025-09-24T22:16:01.714+0300 [DEBUG] [org.gradle.launcher.daemon.server.SynchronizedDispatchConnection] thread 36: received class org.gradle.launcher.daemon.protocol.Finished
+2025-09-24T22:16:01.714+0300 [DEBUG] [org.gradle.launcher.daemon.server.DefaultDaemonConnection] thread 36: Received non-IO message from client: org.gradle.launcher.daemon.protocol.Finished@5f4f7ab7
+2025-09-24T22:16:01.714+0300 [DEBUG] [org.gradle.launcher.daemon.server.DefaultIncomingConnectionHandler] Received finished message: org.gradle.launcher.daemon.protocol.Finished@5f4f7ab7
+2025-09-24T22:16:01.714+0300 [DEBUG] [org.gradle.launcher.daemon.server.SynchronizedDispatchConnection] thread 35: stopping connection
+2025-09-24T22:16:01.715+0300 [DEBUG] [org.gradle.internal.remote.internal.inet.SocketConnection] Discarding EOFException: java.io.EOFException
+2025-09-24T22:16:01.716+0300 [DEBUG] [org.gradle.launcher.daemon.server.SynchronizedDispatchConnection] thread 36: received null
+2025-09-24T22:16:01.716+0300 [DEBUG] [org.gradle.launcher.daemon.server.DefaultDaemonConnection] thread 36: Received end-of-input from client.
+2025-09-24T22:16:01.716+0300 [DEBUG] [org.gradle.launcher.daemon.server.SynchronizedDispatchConnection] thread 35: stopping connection
+2025-09-24T22:16:01.717+0300 [DEBUG] [org.gradle.cache.internal.LockOnDemandCrossProcessCacheAccess] Releasing file lock for jars (/home/asp/projects/java-kafka-platform/.gradle-cache/caches/jars-9)
+2025-09-24T22:16:01.718+0300 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on jars (/home/asp/projects/java-kafka-platform/.gradle-cache/caches/jars-9).
+2025-09-24T22:16:01.718+0300 [DEBUG] [org.gradle.cache.internal.LockOnDemandCrossProcessCacheAccess] Releasing file lock for file content cache (/home/asp/projects/java-kafka-platform/.gradle-cache/caches/8.7/fileContent)
+2025-09-24T22:16:01.719+0300 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on file content cache (/home/asp/projects/java-kafka-platform/.gradle-cache/caches/8.7/fileContent).
+2025-09-24T22:16:01.719+0300 [DEBUG] [org.gradle.internal.watch.vfs.impl.WatchingVirtualFileSystem] Closing VFS, dropping state
+2025-09-24T22:16:01.754+0300 [DEBUG] [org.gradle.cache.internal.DefaultCacheCoordinator] Cache Generated Gradle JARs cache (/home/asp/projects/java-kafka-platform/.gradle-cache/caches/8.7/generated-gradle-jars) was closed 0 times.
+2025-09-24T22:16:01.754+0300 [DEBUG] [org.gradle.internal.watch.registry.impl.DefaultFileWatcherRegistry] Finished listening to file system change events
+2025-09-24T22:16:01.754+0300 [DEBUG] [org.gradle.cache.internal.DefaultCacheCoordinator] Cache Artifact transforms cache (/home/asp/projects/java-kafka-platform/.gradle-cache/caches/transforms-4) was closed 0 times.
+2025-09-24T22:16:01.754+0300 [DEBUG] [org.gradle.cache.internal.LockOnDemandCrossProcessCacheAccess] Releasing file lock for artifact cache (/home/asp/projects/java-kafka-platform/.gradle-cache/caches/modules-2)
+2025-09-24T22:16:01.755+0300 [DEBUG] [org.gradle.cache.internal.btree.BTreePersistentIndexedCache] Closing cache resource-at-url.bin (/home/asp/projects/java-kafka-platform/.gradle-cache/caches/modules-2/metadata-2.106/resource-at-url.bin)
+2025-09-24T22:16:01.755+0300 [DEBUG] [org.gradle.cache.internal.btree.BTreePersistentIndexedCache] Closing cache module-artifact.bin (/home/asp/projects/java-kafka-platform/.gradle-cache/caches/modules-2/metadata-2.106/module-artifact.bin)
+2025-09-24T22:16:01.755+0300 [DEBUG] [org.gradle.cache.internal.btree.BTreePersistentIndexedCache] Closing cache module-metadata.bin (/home/asp/projects/java-kafka-platform/.gradle-cache/caches/modules-2/metadata-2.106/module-metadata.bin)
+2025-09-24T22:16:01.755+0300 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on artifact cache (/home/asp/projects/java-kafka-platform/.gradle-cache/caches/modules-2).
+2025-09-24T22:16:01.755+0300 [DEBUG] [org.gradle.cache.internal.DefaultCacheCoordinator] Cache groovy-dsl (/home/asp/projects/java-kafka-platform/.gradle-cache/caches/8.7/groovy-dsl) was closed 0 times.
+2025-09-24T22:16:01.755+0300 [DEBUG] [org.gradle.cache.internal.LockOnDemandCrossProcessCacheAccess] Releasing file lock for journal cache (/home/asp/projects/java-kafka-platform/.gradle-cache/caches/journal-1)
+2025-09-24T22:16:01.756+0300 [DEBUG] [org.gradle.cache.internal.btree.BTreePersistentIndexedCache] Closing cache file-access.bin (/home/asp/projects/java-kafka-platform/.gradle-cache/caches/journal-1/file-access.bin)
+2025-09-24T22:16:01.756+0300 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on journal cache (/home/asp/projects/java-kafka-platform/.gradle-cache/caches/journal-1).
+2025-09-24T22:16:01.756+0300 [DEBUG] [org.gradle.cache.internal.LockOnDemandCrossProcessCacheAccess] Releasing file lock for file hash cache (/home/asp/projects/java-kafka-platform/.gradle-cache/caches/8.7/fileHashes)
+2025-09-24T22:16:01.756+0300 [DEBUG] [org.gradle.cache.internal.btree.BTreePersistentIndexedCache] Closing cache fileHashes.bin (/home/asp/projects/java-kafka-platform/.gradle-cache/caches/8.7/fileHashes/fileHashes.bin)
+2025-09-24T22:16:01.756+0300 [DEBUG] [org.gradle.cache.internal.btree.BTreePersistentIndexedCache] Closing cache resourceHashesCache.bin (/home/asp/projects/java-kafka-platform/.gradle-cache/caches/8.7/fileHashes/resourceHashesCache.bin)
+2025-09-24T22:16:01.756+0300 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on file hash cache (/home/asp/projects/java-kafka-platform/.gradle-cache/caches/8.7/fileHashes).
+2025-09-24T22:16:01.760+0300 [DEBUG] [org.gradle.cache.internal.VersionSpecificCacheCleanupAction] Processed version-specific caches at /home/asp/projects/java-kafka-platform/.gradle-cache/caches for cleanup in 0.003 secs
+2025-09-24T22:16:01.761+0300 [DEBUG] [java.lang.Runtime] Runtime.exit() called with status: 0
+java.lang.Throwable: Runtime.exit(0)
+	at java.base/java.lang.Shutdown.logRuntimeExit(Shutdown.java:179)
+	at java.base/java.lang.Shutdown.exit(Shutdown.java:160)
+	at java.base/java.lang.Runtime.exit(Runtime.java:188)
+	at java.base/java.lang.System.exit(System.java:1920)
+	at org.gradle.launcher.bootstrap.ProcessCompleter.complete(ProcessCompleter.java:21)
+	at org.gradle.launcher.bootstrap.EntryPoint.run(EntryPoint.java:59)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.gradle.launcher.bootstrap.ProcessBootstrap.runNoExit(ProcessBootstrap.java:60)
+	at org.gradle.launcher.bootstrap.ProcessBootstrap.run(ProcessBootstrap.java:37)
+	at org.gradle.launcher.daemon.bootstrap.GradleDaemon.main(GradleDaemon.java:22)
+Daemon vm is shutting down... The daemon has exited normally or was terminated in response to a user interrupt.
+2025-09-24T22:16:01.762+0300 [DEBUG] [org.gradle.launcher.daemon.registry.PersistentDaemonRegistry] Removing daemon address: [b81e72ee-63f3-4233-9700-36fcc3ff4fea port:44847, addresses:[localhost/127.0.0.1]]
+2025-09-24T22:16:01.762+0300 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire exclusive lock on daemon addresses registry.
+2025-09-24T22:16:01.763+0300 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2025-09-24T22:16:01.763+0300 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
