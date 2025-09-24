@@ -18,3 +18,5 @@
 
 /store/.gradle-cache
 /store/.tools
+
+.tools
